@@ -1,0 +1,10 @@
+FileVersion = 1
+Dependencies = {corlib = "*", raylib-beef = "*"}
+
+[Project]
+Name = "Example"
+TargetType = "BeefGUIApplication"
+StartupObject = "Example.Program"
+
+[Configs.Debug.wasm32]
+OtherLinkFlags = "$(LinkFlags) --preload-file ../../../assets"

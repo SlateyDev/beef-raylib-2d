@@ -1,0 +1,18 @@
+{
+    "configurations": [
+    {
+        "type": "lldb",
+        "request": "launch",
+        "name": "Launch",
+        "preLaunchTask": "Build Beef Application",
+        "linux": {
+            "program": "${workspaceFolder}/build/Debug_Linux64/Example/Example",
+            "cwd": "${workspaceFolder}/example"
+        },
+        "windows": {
+            "program": "${workspaceFolder}/build/Debug_Win64/Example/Example.exe",
+            "cwd": "${workspaceFolder}/example"
+        },
+    }
+    ]
+}
