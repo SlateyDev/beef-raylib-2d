@@ -40,7 +40,7 @@ namespace Example
             defer Raylib.CloseWindow();
 
             // Load texture
-            texture = Raylib.LoadTexture("../assets/textures/sample.png");
+            texture = Raylib.LoadTexture("assets/textures/sample.png");
             defer Raylib.UnloadTexture(texture);
 
             // Create and shuffle deck

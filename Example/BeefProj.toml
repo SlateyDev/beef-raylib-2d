@@ -7,4 +7,4 @@ TargetType = "BeefGUIApplication"
 StartupObject = "Example.Program"
 
 [Configs.Debug.wasm32]
-OtherLinkFlags = "$(LinkFlags) --preload-file ../../../assets"
+OtherLinkFlags = "$(LinkFlags) --preload-file $(ProjectDir)/assets@/assets"
