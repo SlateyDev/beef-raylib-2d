@@ -1,16 +1,29 @@
 using System;
+using RaylibBeef;
 
 namespace Example
 {
-    public struct Card
-    {
-        public String suit;
-        public String rank;
+    delegate void CardProc();
 
-        public this(String suit, String rank)
-        {
-            this.suit = suit;
-            this.rank = rank;
-        }
+    public enum CardKind {
+        Attack,
+        Skill,
+        Power,
+    }
+
+    public struct CardDefinition {
+        public String name;
+        public String flavourText;
+        public int cost;
+        public CardKind kind;
+        public Texture2D artwork;
+        public CardProc proc;
+    }
+
+    public struct Card {
+        public CardDefinition definition;
+        public bool selected;
+        public Vector2 position;
+        public float rotation;
     }
 }
